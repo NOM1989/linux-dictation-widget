@@ -1,0 +1,26 @@
+;; Update the colour of the mic based on the dictation status
+(defpoll dictation-status-hex :interval "0.5s"
+  :initial "#FA2D48"
+  `ps -eo pid,cmd | grep '[n]erd-dictation' > /dev/null && echo "#FA2D48" || echo "inherit"`)
+
+(defwidget dictation_hcompiled []
+  (box :orientation "h"
+       :space-evenly true
+       :class "dictation_hcompiled"
+    (button
+      :style "color: ${dictation-status-hex};"
+      :class "dictation_mic"
+      :onclick "scripts/toggle-dictation > /dev/null &"
+            "🎙")
+    (button 
+      :class "dictation_standby"
+      :onclick "scripts/kill-dictation"
+            "⏻")))
+
+(defwindow dictation
+           :monitor 0
+           :stacking "fg"
+           :geometry (geometry :x "0%"
+                               :y "0px"
+                               :anchor "bottom center")
+           (dictation_hcompiled))
