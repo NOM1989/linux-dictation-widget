@@ -5,5 +5,5 @@ if ps -eo pid,cmd | grep '[n]erd-dictation' > /dev/null; then
 elif [[ "$1" == "off" ]]; then # If the argument 'off' is passed it will kill the dictation if running but not launch it
   :
 else
-  nerd-dictation begin --simulate-input-tool WTYPE --continuous --timeout 15 --numbers-as-digits --numbers-min-value 10 --config /home/NOM/.config/nerd-dictation/configs/language_tool/nerd-dictation.py > /dev/null
+  nerd-dictation begin --simulate-input-tool WTYPE --continuous --timeout 15 --numbers-as-digits --numbers-min-value 10 --config ~/.config/nerd-dictation/configs/language_tool/nerd-dictation.py > /dev/null
 fi

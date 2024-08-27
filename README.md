@@ -9,7 +9,7 @@ Customisable offline dictation shortcut with control widget for Linux, made for 
 - Dictation toggle and microphone status indication
 - Graceful one-click termination
 ## Setup
-This project combines various tools into one to create a seamless dictation experience. This does mean that the following tools must be configured for it to work.
+This project combines various tools into one to create a seamless dictation experience. This does mean that the following tools must be configured for it to work. Additionally, paths in the scripts will likely need updating to match your setup.
 ### LanguageTool Server
 Follow their [installation guide](https://dev.languagetool.org/http-server.html) (fastText is recommended and covered).
 
@@ -36,6 +36,8 @@ Warning - If the widget is opened directly with eww, e.g. `eww open dictation` t
 ## Non-Wayland
 If you are using X11, you will have to edit the input method for nerd dictation by changing the command line arguments in the `toggle-dictation` script (--simulate-input-tool), see [here](https://github.com/ideasman42/nerd-dictation?tab=readme-ov-file#input-simulation-utilities) for more info.
 ## Troubleshooting
-If you are having difficulties getting it working, please ensure each component, e.g. nerd dictation, is working individually by testing it following their installation. Additionally, use a process monitoring tool to ensure the `nerd-dictation` and `languagetool-commandline.jar` processes are actually being launched by the relevant scripts when dictation is active.
+Check paths in the scripts match your config locations.
+
+Ensure each component, e.g. nerd dictation, is working individually by testing it following their installation. Additionally, use a process monitoring tool to ensure the `nerd-dictation` and `languagetool-commandline.jar` processes are actually being launched by the relevant scripts when dictation is active.
 
 Removing some of the `> /dev/null` parts of the commands scattered about the scripts may help you find the problem via checking the `eww logs`.

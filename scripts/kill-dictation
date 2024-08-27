@@ -3,7 +3,7 @@
 # Check if the languagetool server is running
 if ps -eo pid,cmd | grep '[l]anguagetool-commandline.jar' > /dev/null; then
   # End dictation if active
-  /home/NOM/.config/eww/scripts/toggle-dictation off
+  ~/.config/eww/scripts/toggle-dictation off
   # End languagetool server
   ps -eo pid,cmd | grep '[l]anguagetool-commandline' | awk '{print $1}' | xargs kill
   # Close the dictation widget

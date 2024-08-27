@@ -4,9 +4,9 @@
 if ! ps -eo pid,cmd | grep '[l]anguagetool-commandline.jar' > /dev/null; then
   # If not: launch it and the dictation widget
   eww open dictation
-  languagetool --http --config /home/NOM/.config/language-tool/server.properties --port 8081 > /dev/null &
+  languagetool --http --config ~/.config/language-tool/server.properties --port 8081 > /dev/null &
   # Args decide if dictation is triggered on launch
   if [[ "$1" == "active" ]]; then
-    /home/NOM/.config/eww/scripts/toggle-dictation &
+    ~/.config/eww/scripts/toggle-dictation &
   fi
 fi
