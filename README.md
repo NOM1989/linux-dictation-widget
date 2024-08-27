@@ -1,5 +1,9 @@
 # Linux Dictation Widget (Speech to Text)
-Offline dictation shortcut with control widget for Linux, made for Wayland (adaptable for X11 *- untested*). This project combines [nerd-dictation](https://github.com/ideasman42/nerd-dictation) and [LanguageTool](https://github.com/languagetool-org/languagetool) for local speech to text, and wraps control of it neatly into a custom control widget using [eww](https://github.com/elkowar/eww).
+Customisable offline dictation shortcut with control widget for Linux, made for Wayland (adaptable for X11 *- untested*). This project combines [nerd-dictation](https://github.com/ideasman42/nerd-dictation) and [LanguageTool](https://github.com/languagetool-org/languagetool) for local speech to text, and wraps control of it neatly into a custom control widget using [eww](https://github.com/elkowar/eww).
+
+![Widget Idle Image](./.github/dictation-idle.png "Dictation Widget Idle")
+![Widget Active Image](./.github/dictation-active.png "Dictation Widget Active")
+
 ## Features
 - Fast and (relatively) accurate speech to text entered into the current window
 - Dictation toggle and microphone status indication
