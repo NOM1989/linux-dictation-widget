@@ -14,7 +14,7 @@
             "🎙")
     (button 
       :class "dictation_standby"
-      :onclick "scripts/kill-dictation"
+      :onclick "scripts/kill-dictation &"
             "⏻")))
 
 (defwindow dictation
